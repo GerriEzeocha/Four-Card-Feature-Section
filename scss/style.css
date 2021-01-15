@@ -1,0 +1,173 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  margin: 0;
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+/* Overll wrapper*/
+.card-wrapper {
+  min-height: 90vh;
+  margin: 2.625rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  max-width: 1440px;
+  min-width: 375px;
+  background: #fafafa;
+  grid-gap: 1.25rem;
+      grid-template-areas: "header header header " "supervisor teamBuilder calculator" "supervisor karma calculator";
+  /*Mobile Styles*/
+}
+
+@media all and (max-width: 800px) {
+  .card-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "header header" "supervisor teamBuilder" "calculator karma";
+  }
+}
+
+@media all and (max-width: 500px) {
+  .card-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "header" "supervisor" "teamBuilder" "karma"  "calculator";
+  }
+}
+
+/* Header info/intro */
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.hLine1 {
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin-bottom: -1.625rem;
+  text-align: center;
+}
+
+.hLine2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.hText {
+  font-weight: 200;
+  text-align: center;
+}
+
+/*General cards styles*/
+.cards {
+  background: white;
+  -webkit-box-shadow: 6px 6px 21px #a3a5ae;
+          box-shadow: 6px 6px 21px #a3a5ae;
+  border-radius: 0.375rem;
+  padding: 1.625rem;
+}
+
+.cards .img {
+  text-align: right;
+}
+
+.cards .title {
+  font-weight: 600;
+  line-height: 0.125rem;
+}
+
+.cards .subtext {
+  font-weight: 200;
+  padding-bottom: 2.0625rem;
+}
+
+.supervisor {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: supervisor;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 15.625rem;
+  border: 0px solid #45d3d3;
+  border-top-width: 0.3125rem;
+}
+
+.teamBuilder {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: teamBuilder;
+  height: 15.625rem;
+  border: 0px solid #ea5353;
+  border-top-width: 0.3125rem;
+}
+
+.karma {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: karma;
+  height: 15.625rem;
+  border: 0px solid #fcaf4a;
+  border-top-width: 0.3125rem;
+}
+
+.calculator {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: calculator;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 15.625rem;
+  border: 0px solid #549ef2;
+  border-top-width: 0.3125rem;
+}
+
+.attribution {
+  font-size: small;
+  font-weight: 100;
+  color: #a3a5ae;
+  /*mobile*/
+}
+
+.attribution a {
+  color: #a3a5ae;
+  text-decoration: none;
+}
+
+@media all and (max-width: 800px) {
+  .attribution {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
