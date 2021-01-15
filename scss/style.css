@@ -66,18 +66,19 @@ body {
   grid-area: header;
   -ms-grid-column-align: center;
       justify-self: center;
+  color: #4c4e61;
 }
 
 .hLine1 {
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: -1.625rem;
   text-align: center;
 }
 
 .hLine2 {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 
